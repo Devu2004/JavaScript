@@ -409,14 +409,6 @@ console.log(Boolean({}));
 ```
 
 ---
-
-## 💡 Rule
-
-> **Think ➜ Predict ➜ Code ➜ Run ➜ Explain**
-
-Never memorize JavaScript type coercion. Learn the rules so you can predict any output during interviews.
-
----
 ## Remember Table
 
 
@@ -431,5 +423,647 @@ Never memorize JavaScript type coercion. Learn the rules so you can predict any 
 | "abc"     | NaN           |
 
 ---
+
+---
+
+# 🚀 JavaScript Practice Set #3
+### 📚 Topic: Operators (Arithmetic, Assignment, Comparison, Logical & Unary)
+
+> **Difficulty:** 🟡 Intermediate  
+> **Questions:** 20 (Q41–Q60) + Theory + Challenge  
+> **Goal:** Build a strong understanding of JavaScript operators, operator precedence, increment/decrement behavior, comparisons, and interview-favorite edge cases.
+
+---
+
+
+# 📝 Questions
+
+### Arithmetic Operators
+
+### Q41. Predict the output.
+
+```javascript
+console.log(10 + 5 * 2);
+```
+
+---
+
+### Q42. Predict the output.
+
+```javascript
+console.log((10 + 5) * 2);
+```
+
+---
+
+### Q43. Predict the output.
+
+```javascript
+console.log(20 / 5 + 2);
+```
+
+---
+
+### Q44. Predict the output.
+
+```javascript
+console.log(20 / (5 + 5));
+```
+
+---
+
+### Q45. Predict the output.
+
+```javascript
+console.log(10 % 3);
+```
+
+---
+
+## Unary Operators (`++` / `--`)
+
+### Q46. Predict the output.
+
+```javascript
+let a = 5;
+
+console.log(a++);
+console.log(a);
+```
+
+---
+
+### Q47. Predict the output.
+
+```javascript
+let a = 5;
+
+console.log(++a);
+console.log(a);
+```
+
+---
+
+### Q48. Predict the output.
+
+```javascript
+let a = 5;
+
+console.log(a--);
+console.log(a);
+```
+
+---
+
+### Q49. Predict the output.
+
+```javascript
+let a = 5;
+
+console.log(--a);
+console.log(a);
+```
+
+---
+
+### Q50. ⭐ Interview Favourite
+
+Predict the output.
+
+```javascript
+let a = 5;
+
+console.log(a++ + ++a);
+```
+
+---
+
+## Assignment Operators
+
+### Q51. Predict the output.
+
+```javascript
+let a = 10;
+
+a += 5;
+
+console.log(a);
+```
+
+---
+
+### Q52. Predict the output.
+
+```javascript
+let a = 10;
+
+a -= 3;
+
+console.log(a);
+```
+
+---
+
+### Q53. Predict the output.
+
+```javascript
+let a = 10;
+
+a *= 2;
+
+console.log(a);
+```
+
+---
+
+### Q54. Predict the output.
+
+```javascript
+let a = 20;
+
+a /= 4;
+
+console.log(a);
+```
+
+---
+
+### Q55. Predict the output.
+
+```javascript
+let a = 20;
+
+a %= 6;
+
+console.log(a);
+```
+
+---
+
+## Comparison Operators
+
+### Q56. Predict the output.
+
+```javascript
+console.log(5 == "5");
+```
+
+---
+
+### Q57. Predict the output.
+
+```javascript
+console.log(5 === "5");
+```
+
+---
+
+### Q58. Predict the output.
+
+```javascript
+console.log(null == undefined);
+```
+
+---
+
+### Q59. Predict the output.
+
+```javascript
+console.log(null === undefined);
+```
+
+---
+
+### Q60. ⭐ Interview Favourite
+
+Predict the output.
+
+```javascript
+console.log(NaN == NaN);
+console.log(NaN === NaN);
+console.log(Object.is(NaN, NaN));
+```
+
+---
+
+# 📖 Bonus Theory (Important)
+
+### T1. Difference between:
+
+- `==`
+- `===`
+
+When should each one be used?
+
+---
+
+### T2. Difference between:
+
+- Prefix Increment (`++a`)
+- Postfix Increment (`a++`)
+
+Explain **with and without examples**.
+
+---
+
+### T3. Why does this return `false`?
+
+```javascript
+NaN == NaN
+```
+
+---
+
+### T4. What is **Operator Precedence**?
+
+Explain with examples.
+
+---
+
+### T5. ⭐ Interview Question
+
+Difference between:
+
+```javascript
+x = x + 1
+```
+
+and
+
+```javascript
+x += 1
+```
+
+Are they internally the same or different?
+
+---
+
+# 🔥 Challenge Question (Do NOT Run)
+
+Predict the output.
+
+```javascript
+let a = 2;
+
+let b = a++ + ++a + a++ + --a;
+
+console.log(a);
+console.log(b);
+```
+
+---
+
+
+# 🚀 JavaScript Practice Set #4
+### 📚 Topic: Control Flow (`if`, `else`, `else if`, `switch`, Ternary Operator)
+
+> **Difficulty:** 🟡 Intermediate  
+> **Questions:** 20 (Q61–Q80) + Theory + Challenge  
+> **Goal:** Master JavaScript decision-making statements, truthy & falsy values, `switch`, ternary operators, and common interview questions.
+
+---
+
+
+# 📝 Questions
+
+## Part A — `if`
+
+### Q61. Write a program to check if a number is positive.
+
+---
+
+### Q62. Write a program to check if a person is eligible to vote.
+
+**Condition:**
+
+```javascript
+age >= 18
+```
+
+---
+
+### Q63. Predict the output.
+
+```javascript
+let age = 17;
+
+if (age >= 18) {
+    console.log("Adult");
+}
+
+console.log("Done");
+```
+
+---
+
+### Q64. Predict the output.
+
+```javascript
+if (true) {
+    console.log("JavaScript");
+}
+```
+
+---
+
+### Q65. Predict the output.
+
+```javascript
+if (false) {
+    console.log("Hello");
+}
+
+console.log("World");
+```
+
+---
+
+# Part B — `if...else`
+
+### Q66. Write a program to check whether a number is even or odd.
+
+---
+
+### Q67. Write a program to find the greater number between two numbers.
+
+---
+
+### Q68. Predict the output.
+
+```javascript
+let marks = 80;
+
+if (marks >= 40) {
+    console.log("Pass");
+} else {
+    console.log("Fail");
+}
+```
+
+---
+
+### Q69. Predict the output.
+
+```javascript
+let num = -5;
+
+if (num > 0) {
+    console.log("Positive");
+} else {
+    console.log("Negative");
+}
+```
+
+---
+
+### Q70. ⭐ Interview Favourite
+
+Predict the output.
+
+```javascript
+if ("") {
+    console.log("A");
+} else {
+    console.log("B");
+}
+```
+
+---
+
+# Part C — `else if`
+
+### Q71. Write a program to print grades.
+
+| Marks | Grade |
+|--------|-------|
+| 90+ | A |
+| 80+ | B |
+| 70+ | C |
+| 60+ | D |
+| Below 60 | Fail |
+
+---
+
+### Q72. Predict the output.
+
+```javascript
+let marks = 91;
+
+if (marks >= 90) {
+    console.log("A");
+}
+else if (marks >= 80) {
+    console.log("B");
+}
+else {
+    console.log("Fail");
+}
+```
+
+---
+
+### Q73. Predict the output.
+
+```javascript
+let marks = 75;
+
+if (marks >= 90) {
+    console.log("A");
+}
+else if (marks >= 80) {
+    console.log("B");
+}
+else if (marks >= 70) {
+    console.log("C");
+}
+else {
+    console.log("Fail");
+}
+```
+
+---
+
+### Q74. ⭐ Interview Question
+
+Find the mistake.
+
+```javascript
+let age = 20;
+
+if (age > 18) {
+    console.log("Adult");
+}
+else (age == 18) {
+    console.log("Exactly 18");
+}
+```
+
+---
+
+### Q75. Write a program to find the largest among three numbers.
+
+---
+
+# Part D — `switch`
+
+### Q76. Predict the output.
+
+```javascript
+let day = 2;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+```
+
+---
+
+### Q77. Predict the output.
+
+```javascript
+let day = 3;
+
+switch (day) {
+
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    default:
+        console.log("Invalid");
+}
+```
+
+---
+
+### Q78. ⭐ Fall Through
+
+Predict the output.
+
+```javascript
+let x = 1;
+
+switch (x) {
+
+    case 1:
+        console.log("One");
+
+    case 2:
+        console.log("Two");
+
+    default:
+        console.log("Done");
+}
+```
+
+---
+
+### Q79. Write a `switch` program for:
+
+- `1` → January
+- `2` → February
+- `3` → March
+- Default → Invalid Month
+
+---
+
+# Part E — Ternary Operator
+
+### Q80. ⭐ Interview Favourite
+
+Convert this code into a ternary operator.
+
+```javascript
+let age = 20;
+
+if (age >= 18) {
+    console.log("Eligible");
+}
+else {
+    console.log("Not Eligible");
+}
+```
+
+---
+
+# 📖 Bonus Theory
+
+### T1. Difference between:
+
+- `if`
+- `switch`
+
+When should each one be used?
+
+---
+
+### T2. What is **Fall Through** in `switch`?
+
+---
+
+### T3. Difference between:
+
+```javascript
+if (condition)
+```
+
+and
+
+```javascript
+if (Boolean(condition))
+```
+
+---
+
+### T4. ⭐ Interview Question
+
+Which values make an `if` condition execute?
+
+Explain **Truthy** and **Falsy** values with examples.
+
+---
+
+# 🔥 Challenge Question
+
+Predict the output.
+
+```javascript
+let a = 5;
+
+if (a > 2)
+    if (a > 10)
+        console.log("A");
+    else
+        console.log("B");
+```
+
+> ⚠️ This is the famous **Dangling Else** interview question.
+
+---
+
+
+
+### 💡 Rule
+
+> **Think ➜ Predict ➜ Code ➜ Run ➜ Explain**
+
+Understanding **why** a condition executes is more important than simply memorizing the output.
+
+---
+
+
 
 
